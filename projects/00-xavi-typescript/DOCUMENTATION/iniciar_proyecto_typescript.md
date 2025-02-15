@@ -1,16 +1,34 @@
-### Iniciar proyecto en TS
-    extension live Server
-    cd /mi proyecyo/
 
-# (tsc es el compilador de typescript )
-# tsc es la abreviatura de TypeScript Compiler
-#### Crear un archivo tsconfig.json automáticamente:
+# Iniciar proyecto en TS
+**tsc** es el compilador de typescript. TSC es la abreviatura de TypeScript Compiler
+
+
+**Requisitos:**
+* Node.js y npm instalados.
+
+
+### Empecemos!
+
+1. Ir a la carpeta del proyecto
+
+    ```bash
     tsc --init
+    ```  
+Se creará un archivo tsconfig.json automáticamente.
 
-#### Activar el modo watch en la terminal:
+2. Extension live Server (opcional).
+3. Activar el modo watch en la terminal:
+
+    ```bash
     tsc -w
     tsc --watch
-    
-### Muestra el contenido ACTIVO de tsconfig.json
-     tsc --showConfig 
+    ```
 
+4. Ya puedes abrir el archivo html e iniciarlo con `ctrl + 1`
+
+
+
+
+## Mostrar el contenido ACTIVO de tsconfig.json
+
+    tsc --showConfig
