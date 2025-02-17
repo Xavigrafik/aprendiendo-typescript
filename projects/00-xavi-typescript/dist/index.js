@@ -1,4 +1,9 @@
 "use strict";
+Object.defineProperty(exports, "__esModule", { value: true });
+const types_1 = require("./types");
+let user = "Jake";
+console.log((0, types_1.sayHello)(user));
+console.log((0, types_1.sayHello)(user));
 const elem = document.getElementById("logTypescript");
 if (elem) {
     elem.textContent = "Typesript loaded!";

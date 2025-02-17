@@ -1,3 +1,6 @@
+### INSTALAR TYPESCRIPT
+    npm install -g typescript
+
 ### Iniciar proyecto en TS
     extension live Server
     cd /mi proyecyo/
@@ -14,3 +17,12 @@
 ### Muestra el contenido ACTIVO de tsconfig.json
      tsc --showConfig 
 
+
+////////////////////////////////////
+
+<!-- SI NO TIENES PERMISOS DE ADMINISTRADOR Y/O TSC NO FUNCIONA -->
+<!-- PUEDES USAR NPX -->
+
+    npx tsc -w
+    
+<!-- NPX es una herramienta muy práctica que te permite ejecutar comandos de paquetes de Node.js de manera rápida y sencilla, sin la necesidad de una instalación global. -->
