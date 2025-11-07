@@ -32,3 +32,6 @@ Se creará un archivo tsconfig.json automáticamente.
 ## Mostrar el contenido ACTIVO de tsconfig.json
 
     tsc --showConfig
+
+
+## La carpeta dist/ NO se commitea, pero SI se genera-

@@ -1,8 +1,8 @@
-const elem = document.getElementById("logTypescript");
+const logTypescript = document.getElementById("logTypescript");
 
-if (elem) {
-    elem.textContent = "Typesript loaded!";
-    console.log(elem);
+if (logTypescript) {
+    logTypescript.textContent = "Typesript loaded OK!";
+    console.log(logTypescript);
 }
 
 /////////////////////////////////////////////////////////////////////////////////

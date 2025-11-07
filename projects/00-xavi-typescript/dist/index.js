@@ -1,8 +1,8 @@
 "use strict";
-const elem = document.getElementById("logTypescript");
-if (elem) {
-    elem.textContent = "Typesript loaded!";
-    console.log(elem);
+const logTypescript = document.getElementById("logTypescript");
+if (logTypescript) {
+    logTypescript.textContent = "Typesript loaded OK!";
+    console.log(logTypescript);
 }
 /////////////////////////////////////////////////////////////////////////////////
 const h1 = document.querySelector("h1");
