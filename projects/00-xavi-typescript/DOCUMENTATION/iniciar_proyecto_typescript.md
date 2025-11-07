@@ -1,3 +1,9 @@
+### INSTALAR TYPESCRIPT
+    npm install -g typescript
+
+### Iniciar proyecto en TS
+    extension live Server
+    cd /mi proyecyo/
 
 # Iniciar proyecto en TS
 **tsc** es el compilador de typescript. TSC es la abreviatura de TypeScript Compiler
@@ -24,14 +30,18 @@ Se creará un archivo tsconfig.json automáticamente.
     tsc --watch
     ```
 
-4. Ya puedes abrir el archivo html e iniciarlo con `ctrl + 1`
 
+////////////////////////////////////
 
-
-
-## Mostrar el contenido ACTIVO de tsconfig.json
+<!-- SI NO TIENES PERMISOS DE ADMINISTRADOR Y/O TSC NO FUNCIONA -->
+<!-- PUEDES USAR NPX -->
 
     tsc --showConfig
+
+
+    npx tsc -w
+    
+<!-- NPX es una herramienta muy práctica que te permite ejecutar comandos de paquetes de Node.js de manera rápida y sencilla, sin la necesidad de una instalación global. -->
 
 
 ## La carpeta dist/ NO se commitea, pero SI se genera-
