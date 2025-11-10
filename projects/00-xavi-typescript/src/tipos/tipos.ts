@@ -37,3 +37,14 @@ console.log(currentAudio);
 // NULL / UNDEFINED ////////////////////
  let nada:undefined = undefined
 console.log(nada);
+
+
+// REST  (resto...) ////////////////////
+const fullName = (first: string, ...restArgs: string[]):string => {
+    return `${first} ${restArgs.join(' ')}` 
+}
+
+const superman = fullName("Clark", "bb", "cc"); 
+const batman   = fullName("Bruce", "bb"); 
+
+console.log(superman,batman);

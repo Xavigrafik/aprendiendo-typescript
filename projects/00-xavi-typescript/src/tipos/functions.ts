@@ -12,7 +12,7 @@
     console.log(typeof activateBatsignal);
 
 
-    // ARGUMENTOS REQUERIDOS/OPCIONALES: ///////////////////
+    // ARGUMENTOS REQUERIDOS/OPCIONALES?: ///////////////////
     
     const fullName = (firstName: string, lastName?: string)=>{
         return `${firstName} ${lastName||"no-last-name"}`

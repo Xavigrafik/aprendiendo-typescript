@@ -1,9 +1,3 @@
-import { sayHello  } from "./types";
-
-let user = "Jake";
-console.log(sayHello(user));
-console.log(sayHello(user));
-
 const logTypescript = document.getElementById("logTypescript");
 
 if (logTypescript) {
