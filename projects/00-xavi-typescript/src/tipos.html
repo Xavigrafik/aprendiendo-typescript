@@ -6,16 +6,21 @@
     <title>Document</title>
     <link rel="icon" type="image/svg+xml" href="../public/typescript.svg" />
     <link rel="stylesheet" href="../node_modules/bootstrap/dist/css/bootstrap.min.css">
+      <script type="module" src="./components/nav-bar.js"></script>
+      <script type="module" src="./components/hero.js"></script>
     
 </head>
 <body>
     <div class="container">
-        <div class="row mt-5">
-
-            <div class="col-12 bg-info mb-1"><h2>TIPOS</h2></div>
-
-            <div class="col-3 bg-info">
-                <a href="./index.html">Index</a>
+        <div class="row">
+            <div class="col">
+                <nav-bar></nav-bar> 
+            </div>
+        </div>
+        
+        <div class="row">
+            <div class="col-12 mb-1">
+                <hero-block title ="TIPOS"></hero-block>
             </div>
         </div>
     </div>

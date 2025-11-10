@@ -1,8 +1,36 @@
 const logTypescript = document.getElementById("logTypescript");
-
 if (logTypescript) {
-    logTypescript.textContent = "Typesript loaded OK!";
-    console.log(logTypescript);
+    // Es una buena práctica asegurar que el elemento existe antes de buscar descendientes
+    const progressBar = logTypescript.querySelector(".progress .progress-bar") as HTMLElement | null;
+    
+    // Configuración
+    const widths: number[] = [25, 50, 75, 100];
+    const timeInterval: number = 500;
+    let i: number = 0;
+
+    if (progressBar) {
+        // Tipificación: el ID de setInterval en el navegador es un number.
+        const intervalId: number = setInterval(() => {
+            const width = widths[i];
+
+            // 1. Condición de Parada: El índice se ha agotado.
+            if (width === undefined) {
+                clearInterval(intervalId);
+                logTypescript.textContent = "Typescript loaded OK!";
+                return;
+            }
+
+            const prevWidth = i > 0 ? `w-${widths[i - 1]}` : 'w-0';
+            const newClass = `w-${width}`;
+
+            progressBar.classList.remove(prevWidth);
+            progressBar.classList.add(newClass);
+            console.log(`Clase aplicada: ${newClass}`);
+            i++;
+        }, timeInterval);
+    }
+    
+    // El setTimeout original se elimina para evitar la dependencia de calcular el tiempo.
 }
 
 /////////////////////////////////////////////////////////////////////////////////
