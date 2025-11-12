@@ -39,10 +39,10 @@ const h1 = document.querySelector("h1");
 console.log(h1?.textContent);
 
 const title = document.querySelector(".title") as HTMLImageElement;
-console.log(title.textContent);
+console.log(title?.textContent);
 
 const username = document.querySelector("#username") as HTMLInputElement;
-console.log(username.placeholder);
+console.log(username?.placeholder);
 
 /////////////////////////////////////////////////////////////////////////////////
 

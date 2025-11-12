@@ -56,7 +56,7 @@ class HeroBlock extends HTMLElement {
     /**
      * 4. Lifecycle Hook: Llamado cuando un atributo listado en observedAttributes cambia.
      */
-    attributeChangedCallback(name, oldValue, newValue) {
+    attributeChangedCallback(name:string, oldValue:string, newValue:string) {
         if (name === 'title' && oldValue !== newValue) {
             // Re-renderizar solo el H2 si el atributo 'title' cambia
             const h2 = this.shadowRoot?.querySelector('h2');
