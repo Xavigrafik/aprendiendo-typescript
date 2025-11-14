@@ -5,10 +5,12 @@
 // Decorador de Clase simple: Recibe el constructor de la clase.
 // Simplemente imprime el constructor (la clase en sí) en la consola.
 function printToConsole( constructor: Function ) {
+    console.log( "printToConsole: " + constructor.name )
     console.log( constructor )
 }
 
 // Decorador de Fábrica de Clase: Devuelve un decorador de clase (función).
+// (FACTORY DECORATOR)
 // Permite que el decorador reciba un argumento externo (print: boolean).
 // Si 'print' es true, devuelve 'printToConsole'; si es false, devuelve una función vacía,
 // lo que permite habilitar/deshabilitar el logging en tiempo de diseño.
@@ -26,7 +28,8 @@ const printToConsoleConditional = ( print: boolean = false ):Function => {
 // tanto de la CLASE como del PROTOTIPO (métodos) de la clase en el futuro.
 const bloquearPrototipo = function( constructor: Function ) {
     Object.seal( constructor ) // Sella las propiedades estáticas de la clase
-    Object.seal( constructor.prototype ) // Sella los métodos (prototipo) de la clase
+    Object.seal(constructor.prototype) // Sella los métodos (prototipo) de la clase
+    console.log( "bloquearPrototipo: " + constructor.name )
 }
 
 // --------------------------------------------------------
@@ -94,9 +97,9 @@ function readonly( isWritable: boolean = true ):Function {
 
 // @bloquearPrototipo: Aplica el decorador 'bloquearPrototipo'.
 // Resultado: Impide que se añadan nuevos métodos o propiedades a la clase/prototipo de Pokemon.
-@bloquearPrototipo
 // @printToConsoleConditional( false ): Aplica el decorador de fábrica con 'false'.
 // Resultado: Devuelve una función vacía que NO IMPRIME la definición de la clase en la consola.
+@bloquearPrototipo
 @printToConsoleConditional( false ) 
 export class Pokemon {
 

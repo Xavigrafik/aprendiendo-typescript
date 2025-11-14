@@ -3,12 +3,13 @@ import { printObject, genericFunction, genericFunctionArrow } from "./generics/g
 import { IHero, IVillain } from "./interfaces";
 import { Pokemon } from './decoradores/pokemon-class';
 
+// //////////////////////////////////////////////
 const ironman = new Hero("Iron Man", 1, 55);
 console.log(ironman);
 console.log(ironman.power);
 
 const batman = new Hero("Batman", 2, 33);
-console.log(batman);
+// console.log(batman);
 console.log(batman.power);
 
 console.log('genericFunction va a devolver el tipo que recibe');
